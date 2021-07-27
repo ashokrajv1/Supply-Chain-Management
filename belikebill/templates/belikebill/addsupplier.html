@@ -1,0 +1,18 @@
+{% extends 'belikebill/base_new.html' %}
+{% block content %}
+	<form method="POST">
+		{% csrf_token %}
+		<fieldset class="form-group">
+			<legend class="border-bottom mb-4">Add Supplier</legend>
+
+			<div id="div_id_username" class="form-group"> <label for="id_username" class=" requiredField">
+                Supplier Name<span class="asteriskField">*</span> </label> <div class=""> <input type="text" name="suppliername" maxlength="150" autofocus class="textinput textInput form-control" required id="id_username"> </div> </div> <div id="div_id_email" class="form-group"> <label for="id_email" class=" requiredField">
+                Address<span class="asteriskField">*</span> </label> <div class=""> <input type="text" name="address" maxlength="150" autofocus class="textinput textInput form-control" required id="id_username"> </div> </div> <div id="div_id_email" class="form-group"> <label for="id_email" class=" requiredField">
+                Phone<span class="asteriskField">*</span> </label> <div class=""> <input type="text" name="phone" maxlength="150" autofocus class="textinput textInput form-control" required id="id_username"> </div> </div> <div id="div_id_email" class="form-group"> <label for="id_email" class=" requiredField">
+                GST Number<span class="asteriskField">*</span> </label> <div class=""> <input type="number" name="gst" maxlength="150" autofocus class="textinput textInput form-control" required id="id_username"> </div> </div> <div id="div_id_email" class="form-group"> <label for="id_email" class=" requiredField">
+		</fieldset>
+		<div class="form-group">
+			<button class="btn btn-outline-info" type="submit">Add Supplier</button>
+		</div>
+	</form>
+{%endblock content%}

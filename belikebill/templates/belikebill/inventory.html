@@ -1,0 +1,19 @@
+{% extends 'belikebill/base_new.html' %}
+{% block content %}
+	<form method="POST">
+		{% csrf_token %}
+		<fieldset class="form-group">
+			<legend class="border-bottom mb-4">Add Product</legend>
+
+			<div id="div_id_username" class="form-group"> <label for="id_username" class=" requiredField">
+                Product Name<span class="asteriskField">*</span> </label> <div class=""> <input type="text" name="name" maxlength="150" autofocus class="textinput textInput form-control" required id="id_username"> </div> </div> <div id="div_id_email" class="form-group"> <label for="id_email" class=" requiredField">
+                Quantity<span class="asteriskField">*</span> </label> <div class=""> <input type="number" name="stock" maxlength="150" autofocus class="textinput textInput form-control" required id="id_username"> </div> </div> <div id="div_id_email" class="form-group"> <label for="id_email" class=" requiredField">
+                Supplier Name<span class="asteriskField">*</span> </label> <div class=""> <input type="text" name="supplier" maxlength="150" autofocus class="textinput textInput form-control" required id="id_username"> </div> </div> <div id="div_id_email" class="form-group"> <label for="id_email" class=" requiredField">
+                Price<span class="asteriskField">*</span> </label> <div class=""> <input type="number" name="mrp" maxlength="150" autofocus class="textinput textInput form-control" required id="id_username"> </div> </div> <div id="div_id_email" class="form-group"> <label for="id_email" class=" requiredField">
+                HSN<span class="asteriskField">*</span> </label> <div class=""> <input type="number" name="hsn" maxlength="150" autofocus class="textinput textInput form-control" required id="id_username"> </div> </div> <div id="div_id_email" class="form-group"> <label for="id_email" class=" requiredField">
+		</fieldset>
+		<div class="form-group">
+			<button class="btn btn-outline-info" type="submit">Add Product</button>
+		</div>
+	</form>
+{%endblock content%}

@@ -1,0 +1,26 @@
+{% extends 'belikebill/base_new.html' %}
+{% block content %} 
+
+
+<div class="content-section">
+	<form method="POST">
+		{% csrf_token %}
+		<fieldset class="form-group">
+			<legend class="border-bottom mb-4"> Login</legend>
+
+			<div id="div_id_username" class="form-group"> <label for="id_username" class=" requiredField">
+                Username<span class="asteriskField">*</span> </label> <div class=""> <input type="text" name="username" maxlength="150" autofocus class="textinput textInput form-control" required id="id_username"> </div> </div> <div id="div_id_email" class="form-group"> <label for="id_email" class=" requiredField">
+                Password<span class="asteriskField">*</span> </label> <div class=""> <input type="password" name="password" class="textinput textInput form-control" required id="id_password1"> <small id="hint_id_password1" class="form-text text-muted"></small> </div> </div> <div id="div_id_password2" class="form-group"> <label for="id_password2" class=" requiredField">
+		</fieldset>
+		<div class="form-group">
+			<button class="btn btn-outline-info" type="submit">Log in</button>
+		</div>
+	</form>
+	<div class="border-top pt-3">
+		<small class="text-muted">
+			Don't Have an Account? <a class="ml-2" href="{% url 'reg' %}"> Sign Up!</a>
+		</small>
+	</div>
+</div>
+
+{%endblock content%}

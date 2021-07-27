@@ -1,0 +1,18 @@
+{% extends 'belikebill/base_new.html' %}
+{% block content %}
+	<form method="POST">
+		{% csrf_token %}
+		<fieldset class="form-group">
+			<legend class="border-bottom mb-4">Billing</legend>
+			<div id='bill'>
+				<div id="div_id_username" class="form-group"> <label for="id_username" class=" requiredField">
+                Product Name<span class="asteriskField">*</span> </label> <div class=""> <input type="text" name="name" maxlength="150" autofocus class="textinput textInput form-control" required id="id_username"> </div> </div> <div id="div_id_email" class="form-group"> <label for="id_email" class=" requiredField">
+                Quantity<span class="asteriskField">*</span> </label> <div class=""> <input type="number" name="quantity" maxlength="150" autofocus class="textinput textInput form-control" required id="id_username"> </div> </div> <div id="div_id_email" class="form-group"> <label for="id_email" class=" requiredField"></label></div>
+                <input type="checkbox" name="print"> Print Bill
+           </div>
+		</fieldset>
+		<div class="form-group">
+			<button class="btn btn-outline-info" type="submit">Add Item</button>
+		</div>
+	</form>
+{%endblock content%}
